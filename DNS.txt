@@ -1,0 +1,8 @@
+- name: Install Dns
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Set a single address on the adapter named Ethernet
+      win_dns_client:
+      adapter_names: Ethernet
+      ipv4_addresses: 10.1.0.13
